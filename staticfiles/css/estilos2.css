@@ -1,0 +1,24 @@
+/* estilos.css */
+.center-form {
+    width: 20%;
+    margin: 0 auto;
+}
+
+/* Estilo para cada linha do formulário */
+.form-container p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espaçamento entre os rótulos e os campos */
+}
+
+.form-container label {
+    flex-basis: 100px; /* Largura do rótulo, pode ajustar conforme necessário */
+    margin-right: 10px; /* Espaçamento entre o rótulo e o campo */
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="date"] {
+    flex: 1; /* Ocupa o restante do espaço disponível no contêiner flex */
+}

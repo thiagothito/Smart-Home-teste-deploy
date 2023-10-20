@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://kit.fontawesome.com/cd002458e6.css" crossorigin="anonymous">
+
+    <title>Meu perfil - Smart Home</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-primary navbar-expand-sm navbar-light">
+
+
+            <div class="container">
+
+                <!-- Logo -->
+
+                <img src="{% static 'img/logo.png' %}" style="width: 170px;"> </a>
+
+
+                <!-- Menu horizontal -->
+
+                <!-- Botão para quando o tamanho da tela é menor que o sm -->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-principal">
+                    <ul class="navbar-nav ml-auto">
+                        <li>
+                            <a href="{% url 'home' %}" class="btn btn-outline-light ml-4"> Sair e voltar para a home
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Corpo da página -->
+    <section class="bg-light">
+
+        <br>
+        <h4 class="pl-5">Meu perfil</h4>
+        <br>
+
+        <p class="text-center">Este é seu espaço, o seu perfil!
+            Aqui você pode alterar seus dados e verificar a compatibilidade da sua casa com a smart home!</p>
+
+        <div class="text-center">
+            <br> 
+            <h6><a class="text-dark" href="{% url 'cadastro' %}">Clique aqui</a> para alterar seus dados.</h6>
+            <br>
+            <h6><a class="text-dark"
+                    onclick="alert('Verifique sua caixa de e-mail! Nós da SMART HOME enviamos um e-mail para você com as informações sobre o estudo da viabilidade e os resultados!')"
+                    href="">Clique aqui</a> para obter os resultados! </h6>
+            <br>
+        </div>
+    </section>
+
+
+    <!-- Rodapé -->
+    <div id="rodape" class="bg-dark text-light text-center"> Todos os direitos reservados
+    </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

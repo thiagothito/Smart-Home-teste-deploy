@@ -1,0 +1,220 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <!-- Meta tags Obrigatórias -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://kit.fontawesome.com/cd002458e6.css" crossorigin="anonymous">
+
+        <style type="text/css">
+            #outromodelo {
+                margin-left: 10px;
+            }
+        </style>
+
+        <title>Cadastro - Smart Home</title>
+
+    </head>
+
+    
+
+    <body>
+        <header>
+            <nav class="navbar bg-primary navbar-expand-sm navbar-light">
+        
+        
+                <div class="container">
+                        
+                    <!-- Logo -->
+
+                    <img src="{% static 'img/logo.png' %}" style="width: 170px;"> </a>
+                    
+        
+                    <!-- Menu horizontal -->
+        
+                    <!-- Botão para quando o tamanho da tela é menor que o sm -->
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="nav-principal">
+                        <ul class="navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a href="{% url 'home' %}" class="nav-link text-light">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'quem_somos' %}" class="nav-link text-light">Quem Somos</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'login' %}" class="btn btn-outline-light ml-4">Entrar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        
+        </header>
+
+
+        <form action="{% url 'cadastro' %}" method="POST">{% csrf_token %}
+
+            <br>
+            <h5 class="text-center text-primary">Preencha os campos abaixo com seus dados!</h5>
+            <br>
+            <h4 class="pl-5">Dados pessoais</h4>
+            <hr>
+        
+            <hr>
+            <label for="NomeCompleto">Nome completo:</label> <br>
+            <input type="text" placeholder="digite seu nome..." name="username">
+            <br>
+            <label for="Email">E-mail:</label><br>
+            <input type="email" placeholder="digite seu endereço de email..." name="email">
+            
+            <br>
+            <label for="Senha">Senha:</label><br>
+            <input type="password" placeholder="cadastre uma senha segura..." name="senha">
+            <br>
+                   
+            <hr>
+        
+            <br>
+        
+            <h4 class="pl-5">Casa</h4>
+            <hr>
+        
+            <label for="bateria">Modelo de bateria utilizada em sua casa:</label>
+            <select id="bateria" class="col-md-6">
+                <option>Bateria Solar de Lítio 5kWh - Unipower UPLFP48 6000 ciclos</option>
+                <option>Bateria Estacionária Moura Solar 12MS234 (220Ah)</option>
+                <option>Bateria Estacionaria Freedom Df4001 240ah Painel Solar</option>
+                <option>Bateria Estacionaria Freedom Df2500 165ah Nobreak, Solar</option>
+                <option>Bateria Estacionária Fulguris FGCL150 (150Ah)</option>
+                <option>Bateria Estacionária Heliar Freedom DF1000 (70Ah / 60Ah)</option>
+                <option>Outro modelo</option>
+                <option>Não possuo bateria em minha residência</option>
+            </select>
+            <br>
+            <label for="outromodelo">Outro:</label>
+            <input type="text" name="" id="outromodelo" placeholder="Modelo da bateria">
+        
+            <br>
+            <label for="arcond">Modelo de ar condicionado presente em sua casa:</label>
+            <select class="col-md-6">
+                <option>Ar Condicionado Split Hi Wall Inverter LG Dual Voice 9000 BTU/h Frio S4UQ09AA31B.EB2GAMZ - 220 Volts
+                </option>
+                <option>Ar Condicionado Split 12000 BTUs Midea Frio Springer AirVolution Hi Wall 42TFCA/38TFCA 220V</option>
+                <option>Ar Condicionado Hi Wall Samsung WindFree Connect Inverter 9.000 Btus Frio 220v</option>
+                <option>Ar Condicionado Split LG Dual Inverter Voice 12.000 BTU/h Frio Monofásico S4NQ12JA31F.EB1GAMZ – 127
+                    Volts
+                </option>
+                <option>Outro modelo</option>
+                <option>Não possuo ar condicionado em minha residência</option>
+            </select>
+            <br>
+            <label for="outromodelo">Outro:</label>
+            <input type="text" name="" id="outromodelo" placeholder="Modelo do ar condicionado">
+        
+            <br>
+            <label for="aquecedor">Selecione o modelo de aquecedor presente em sua casa:</label>
+            <select id="aquecedor" class="col-md-6">
+                <option>Aquecedor Ventisol Halógeno Ah-01 Preto - 220V</option>
+                <option>Aquecedor Halogênio Britânia 800W AB800B - 220v</option>
+                <option>Aquecedor Philco 2000W PAQ2000B - 220v</option>
+                <option>Aquecedor Quartzo 220V Aq-02 Premium</option>
+                <option>Aquecedor Domestico Mod A1-02 220V Premium</option>
+                <option>Não possuo aquecedor em minha residência</option>
+                <option>Outro modelo</option>
+            </select>
+            <br>
+            <label for="outromodelo">Outro:</label>
+            <input type="text" name="" id="outromodelo" placeholder="Modelo do aquecedor">
+        
+            <br>
+            <label for="waterheater">Selecione o modelo de water heater presente na sua casa:</label>
+            <select id="waterheater" class="col-md-6">
+                <option>Boiler Solar Baixa Pressão Desnível 200L New Econotec Bivolt Ouro Fino</option>
+                <option>Boiler Solar Alta Pressão Desnível 400L MKP400 Alumínio e Aço Heliotek</option>
+                <option>Reservatório Boiller 500 Litros Para Aquecedor Solar Baixa Pressão Nível</option>
+                <option>Boiler 400 Litros Alta Pressao Aço316 - Soria</option>
+                <option>Reservatório Térmico(boiler)400l Nivel Fechado 316</option>
+                <option>Reservatório Térmico (boiler) 800l Fechado 316 - Alta Pressão 220v</option>
+                <option>Aquecedor Solar Acoplado Ecologic À Vácuo 313L Aço 316 Com 36 Tubos Estrutura Em Alumíni</option>
+                <option>Aquecedor Solar a Vácuo 150 Litros UNISOL 15 Tubos Aço Inox 316 + Caixa Auxiliar</option>
+                <option>Outro modelo</option>
+                <option>Não possuo water heater em minha residência</option>
+            </select>
+            <br>
+            <label for="outromodelo">Outro:</label>
+            <input type="text" name="" id="outromodelo" placeholder="Modelo do water heater">
+        
+            <br>
+            <label for="chuveiro">Selecione o modelo de chuveiro presente na sua casa:</label>
+            <select id="chuveiro" class="col-md-6">
+                <option>Ducha Chuveiro 25x25 Inox Com Braço 40cm Solar Gás Piscina Rose Gold</option>
+                <option>Chuveiro Loren Shower Eletrônico 7500w 220v~ LORENZETTI Branco</option>
+                <option>Chuveiro Soft Rubi Square Articulavel</option>
+                <option>Chuveiro Tradição 127V 5500W, Lorenzetti, 7514205, Cromado, Pequeno</option>
+                <option>Hydra DPOP.E.772BR, Ducha Eletrônica Optima 7700W, 220V, Branco</option>
+                <option>Chuveiro Elétrico 7800w 220v Acqua Duo Ultra</option>
+                <option>Ducha Advanced Turbo Eletrônico 220V 7500W, Lorenzetti, 7510528, Branco, Pequeno</option>
+                <option>Chuveiro Lorenzetti Acqua Duo Flex Ultra Eletrônico Branco 127v</option>
+                <option>Chuveiro Eletrônico Digital 220V 8800W Híbrido Prata KDT</option>
+            </select>
+            <br>
+            <label for="outromodelo">Outro:</label>
+            <input type="text" name="" id="outromodelo" placeholder="Modelo do chuveiro">
+            <br>
+        
+            <label for="geladeira">Selecione o modelo de geladeira presente na sua casa:</label>
+            <select id="geladeira" class="col-md-6">
+                <option>Geladeira Brastemp BRM44HK Frost Free Duplex com Compartimento Extrafrio e Fresh Zone 375L Inox 127v
+                </option>
+                <option>Geladeira/Refrigerador Frost Free cor Inox 310L Electrolux (TF39S) 220V</option>
+                <option>Geladeira Consul Frost Free Duplex 386 litros com Altura Flex cor  Inox  CRM44AK</option>
+                <option>Geladeira Brastemp Frost Free Duplex 375L Branca BRM44HB</option>
+                <option>Geladeira Consul 334L CRD37EB Cycle Defrost com Freezer Supercapacidade Branca</option>
+                <option>Geladeira Side By Side Eco Inverter Philco 434 Litros Inox PRF533ID - 220V</option>
+                <option>Geladeira / Refrigerador Consul Frost Free, Duplex, 340L, Prateleiras Altura Flex, Evox - CRM39AK
+                </option>
+                <option>Geladeira/Refrigerador Frost Free 310 Litros Branco Electrolux (TF39) 220V</option>
+                <option>Geladeira Consul Frost Free 342 litros cor Inox com Gavetão Hortifruti - CRB39AK</option>
+                <option>Geladeira Brastemp Frost Free Duplex 375L Branca BRM44HB</option>
+                <option>Outro modelo</option>
+                <option>Não possuo geladeira em minha casa</option>
+            </select>
+            <br>
+            <label for="outromodelo">Outro:</label>
+            <input type="text" name="" id="outromodelo" placeholder="Modelo da geladeira">
+        
+        
+            <br>
+            <div class="text-center">
+                <button type="submit" class="btn btn-lg btn-success" name="" href="login.html"> Salvar dados </button>
+            </div>
+        
+                    
+        </form>
+
+
+    </body>
+
+       
+
+    
+
+
+</html>  

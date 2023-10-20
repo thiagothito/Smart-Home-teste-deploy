@@ -1,0 +1,231 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://kit.fontawesome.com/cd002458e6.css" crossorigin="anonymous">
+
+    <title>Quem somos - Smart Home</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-primary navbar-expand-sm navbar-light">
+
+
+            <div class="container">
+
+                <!-- Logo -->
+                <img src="{% static 'img/logo.png' %}" style="width: 170px;"> </a>
+
+
+                <!-- Menu horizontal -->
+
+                <!-- Botão para quando o tamanho da tela é menor que o sm -->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-principal">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="{% url 'home' %}" class="nav-link text-light">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'quem_somos' %}" class="nav-link text-light">Quem Somos</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'login' %}" class="btn btn-outline-light ml-4">Entrar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+   
+    <!-- Corpo da página -->
+    <section class="bg-light">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 d-flex">
+                    <!-- <div> para os textos da página -->
+                    <div class="align-self-center">
+
+                        <br>
+                        <h4 class="display-4 text-dark text-center">Como surgiu o projeto smart home?</h4>
+
+                        <p class="text-secondary text-justify">Ut sollicitudin, augue id pulvinar faucibus, est lorem
+                            condimentum eros, sed semper libero ligula vel libero. Aenean gravida convallis felis, in
+                            euismod enim ultrices vitae. Etiam ac turpis lectus. Nulla metus purus, ornare ut lacinia
+                            eget, mollis et dolor. Nullam accumsan eget elit sit amet sodales. Etiam hendrerit dictum
+                            urna eget gravida. Sed convallis urna sed quam laoreet, ut blandit metus vestibulum. Cras
+                            sollicitudin lacinia iaculis. Etiam condimentum efficitur turpis. Mauris a nulla et dolor
+                            tempus pharetra.</p>
+
+                        <br>
+
+                        <h5 class="text-center">Conheça um pouco mais sobre os participantes deste projeto!</h5>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <div> para os participantes -->
+            <hr>
+            <!-- participante 1 -->
+            <div class="d-flex">
+
+                <!-- Foto do participante -->
+                <div class="bg-light" style="padding: 3px;">
+                    <img src="{% static 'img/imagem2.png' %}" style="width: 100px">
+                </div>
+
+                <!-- Sobre o participante -->
+                <div class="text-dark text-justify" style="padding-left: 10px;">
+                    <h6 class="text-dark text-weight-bold text-left">Michael David de Souza Dutra</h6>
+                    <p> Aenean gravida convallis felis, in euismod enim ultrices vitae. Etiam ac turpis lectus. Nulla
+                        metus purus, ornare ut lacinia eget, mollis et dolor. Nullam accumsan eget elit sit amet
+                        sodales.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- participante 2 -->
+            <div class="d-flex">
+
+                <!-- Foto do participante -->
+                <div class="bg-light" style="padding: 3px;">
+                    <img src="{% static 'img/imagem2.png' %}" style="width: 100px">
+                </div>
+
+                <!-- Sobre o participante -->
+                <div class="text-dark text-justify" style="padding-left: 10px;">
+                    <h6 class="text-dark text-weight-bold text-left">Thiago Thito de Paula Oliveira Neves</h6>
+                    <p> Aenean gravida convallis felis, in euismod enim ultrices vitae. Etiam ac turpis lectus. Nulla
+                        metus purus, ornare ut lacinia eget, mollis et dolor. Nullam accumsan eget elit sit amet
+                        sodales.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- participante 3 -->
+            <div class="d-flex">
+
+                <!-- Foto do participante -->
+                <div class="bg-light" style="padding: 3px;">
+                    <img src="{% static 'img/imagem2.png' %}" style="width: 100px">
+                </div>
+
+                <!-- Sobre o participante -->
+                <div class="text-dark text-justify" style="padding-left: 10px;">
+                    <h6 class="text-dark text-weight-bold text-left">Jessiany Naves</h6>
+                    <p> Aenean gravida convallis felis, in euismod enim ultrices vitae. Etiam ac turpis lectus. Nulla
+                        metus purus, ornare ut lacinia eget, mollis et dolor. Nullam accumsan eget elit sit amet
+                        sodales.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- participante 4 -->
+            <div class="d-flex">
+
+                <!-- Foto do participante -->
+                <div class="bg-light" style="padding: 3px;">
+                    <img src="{% static 'img/imagem2.png' %}" style="width: 100px">
+                </div>
+
+                <!-- Sobre o participante -->
+                <div class="text-dark text-justify" style="padding-left: 10px;">
+                    <h6 class="text-dark text-weight-bold text-left">Luiza Diniz Grancieri</h6>
+                    <p> Aenean gravida convallis felis, in euismod enim ultrices vitae. Etiam ac turpis lectus. Nulla
+                        metus purus, ornare ut lacinia eget, mollis et dolor. Nullam accumsan eget elit sit amet
+                        sodales.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- participante 5 -->
+            <div class="d-flex">
+
+                <!-- Foto do participante -->
+                <div class="bg-light" style="padding: 3px;">
+                    <img src="{% static 'img/imagem2.png' %}" style="width: 100px">
+                </div>
+
+                <!-- Sobre o participante -->
+                <div class="text-dark text-justify" style="padding-left: 10px;">
+                    <h6 class="text-dark text-weight-bold text-left">Maysa Mendes Campos</h6>
+                    <p> Aenean gravida convallis felis, in euismod enim ultrices vitae. Etiam ac turpis lectus. Nulla
+                        metus purus, ornare ut lacinia eget, mollis et dolor. Nullam accumsan eget elit sit amet
+                        sodales.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- participante 6 -->
+            <div class="d-flex">
+
+                <!-- Foto do participante -->
+                <div class="bg-light" style="padding: 3px;">
+                    <img src="{% static 'img/imagem2.png' %}" style="width: 100px">
+                </div>
+
+                <!-- Sobre o participante -->
+                <div class="text-dark text-justify" style="padding-left: 10px;">
+                    <h6 class="text-dark text-weight-bold text-left">Vanessa Monteiro</h6>
+                    <p> Aenean gravida convallis felis, in euismod enim ultrices vitae. Etiam ac turpis lectus. Nulla
+                        metus purus, ornare ut lacinia eget, mollis et dolor. Nullam accumsan eget elit sit amet
+                        sodales.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <br>
+        <br>
+    </section>
+
+
+    <!-- Rodapé -->
+    <div id="rodape" class="bg-dark text-light text-center"> Todos os direitos reservados
+    </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
